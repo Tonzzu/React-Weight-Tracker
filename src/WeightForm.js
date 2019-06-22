@@ -1,8 +1,8 @@
 import React from "react";
-import "./WeightTracker.css";
+import "./WeightForm.css";
 import WeightChart from "./WeightChart";
 
-class WeightTracker extends React.Component {
+class WeightForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -30,8 +30,10 @@ class WeightTracker extends React.Component {
     if (value === null || value === "") {
       alert("Weight can not be empty");
     } else {
-      let date = new Date().toLocaleTimeString();
+      let date = new Date().toLocaleTimeString(); // Change to .toLocaleDateString() for build
       weightList[date] = value + " kg";
+      // weightList[date] = value;
+      // localStorage.setItem(date, value);
     }
 
     // console.log(value)
@@ -49,6 +51,7 @@ class WeightTracker extends React.Component {
           <label>
             Enter your bodyweight in kilograms:
             <input
+            className="textField"
               type="number"
               value={this.state.value}
               onChange={this.handleChange}
@@ -69,4 +72,4 @@ class WeightTracker extends React.Component {
   }
 }
 
-export default WeightTracker;
+export default WeightForm;

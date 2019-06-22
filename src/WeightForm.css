@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
+  width: 600px;
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 3px;
@@ -18,8 +18,8 @@
 .btn {
   width: 100px;
   height: 30px;
-  background-color: aquamarine;
-  border: 1px solid rgb(109, 109, 235);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(109, 109, 235);
   border-radius: 3px;
   cursor: pointer;
   margin: 10px 0;
@@ -27,4 +27,17 @@
 
 ul {
   list-style: none;
+}
+
+.textField {
+  height: 30px;
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  .weightForm {
+    width: 90vw;
+    height: 30%;
+    margin: 10px 0;
+  }
 }
